@@ -6,7 +6,22 @@ const clearBtn=document.getElementById('clearBtn');
 const saveBtn=document.getElementById('saveBtn');
 const retrieveBtn=document.getElementById('retrieveBtn');
 const ctx=canvas.getContext('2d');
+document.addEventListener('DOMContentLoaded', function() {
+    const canvas = document.getElementById('myCanvas');
+    const context = canvas.getContext('2d');
 
+    // Function to resize the canvas
+    function resizeCanvas() {
+        canvas.width = window.innerWidth * 0.8; // 80% of the window's width
+        canvas.height = window.innerHeight * 0.5; // 60% of the window's height
+    }
+
+    // Initial resize
+    resizeCanvas();
+
+    // Resize the canvas when the window is resized
+    window.addEventListener('resize', resizeCanvas);
+});
 colorPicker.addEventListener('change',(e)=>{
     ctx.strokeStyle= e.target.value;
     ctx.fillStyle=e.target.value;
