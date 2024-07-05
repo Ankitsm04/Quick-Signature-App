@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top{
+    margin: 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.black{
+    font-size: larger;
+    text-align: center;
+}
+.black input,select{
+    border: 2px solid black;
+    padding: 30px 30px 30px 30px;
+    width: 200px;
+    height: 35px;
+    padding: 3px;
+    font-size: medium;
+}
+
+canvas{
+    width: 800px;
+    height: 500px;
+    margin-top: 30px;
+    border: 3px solid black;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body{
+        height: auto;
+    }
+    .top{
+        margin: 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1px;
+    }
+    canvas{
+        margin-left: 2vh;
+        margin-right: 2vh;
+        width: 350px;
+        height: 350px;
+        margin-bottom: 2vh;
+    }
+    .bottom{
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .btn{
+        width: 150px;
+    }
+    .black input,select{
+        padding: 15px;
+        display: flex;
+        font-size: smaller;
+        height: 50px;
+        justify-content: center;
+    }
+    .black select{
+        padding: 3px;
+    }
+    .black option{
+        font-size: small;
+    }
+}    
+
